@@ -1,7 +1,5 @@
-const { request, response } = require('express');
 const express = require('express');
 const cors = require('cors')
-
 const app = express()
 
 const areaRouter = require('./router/area')
@@ -19,8 +17,9 @@ app.use('/perimeter', perimeterRouter)
 app.use('/fibonacci', fibonacciRouter)
 app.use('/factorial', factorialRouter)
 
-const PORT = 3001
-app.listen(PORT, () =>{
-    console.log(`Server is running on port: ${PORT}`)
+const port = process.env.PORT || 5000;
+
+app.listen(port, () =>{
+    console.log(`Server is running on port: ${port}`)
 })
 
