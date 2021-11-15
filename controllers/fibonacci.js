@@ -1,4 +1,5 @@
 const fibonacciServices = require('../services/fibonacci')
+const validationsService = require('../services/validations')
 
 const calculateFibonacci = async (req, res) => {
     try {
@@ -6,7 +7,7 @@ const calculateFibonacci = async (req, res) => {
 
         const parsedNumber = parseInt(number)
 
-        const isValid = validationsService.isValidnumber(parsedNumber)
+        const isValid = validationsService.isValidNumber(parsedNumber)
 
         if(!isValid){
             throw new Error('El número no es válido')

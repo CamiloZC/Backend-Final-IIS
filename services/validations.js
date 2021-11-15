@@ -22,6 +22,10 @@ const isValidRadio = (radio) => {
     return radio > 0
 }
 
+const isValidNumber = (number) => {
+    return number > 0
+}
+
 const isRectangle = (sides) => {
     const { sideA, sideB} = sides
 
@@ -31,5 +35,6 @@ const isRectangle = (sides) => {
 module.exports = {
     isTriangle,
     isValidRadio,
-    isRectangle
+    isRectangle,
+    isValidNumber
 }
